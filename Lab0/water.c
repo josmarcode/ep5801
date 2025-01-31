@@ -77,17 +77,17 @@ int main() {
 
     // Test data from the sensor
     uint8_t sensorDataArray[12] = {
-        0x62,                               // Nivel de batería (98)
-        0xFF, 0xFE,                         // Temperatura ambiental (-2)
-        0x00, 0x00, 0x69,                   // Nivel de tanque de reserva (105)
-        0x00, 0x01, 0x81, 0x3C,             // Nivel de tanque principal (98620)
+        0x62,                               // Battery level (98)
+        0xFF, 0xFE,                         // Ambient temperature (-2)
+        0x00, 0x00, 0x69,                   // Reserve tank level (105)
+        0x00, 0x01, 0x81, 0x3C,             // Main tank level (98620)
         0x01, 0x00                          // Checksum (256)
     };
 
-    // Procesar los datos
+    // Process the data
     SensorData* sensorData = processSensorData(sensorDataArray);
 
-    // Mostrar los resultados
+    // Show results
     printf("Nivel de batería: %u\n", sensorData -> battery_level);
     printf("Temperatura ambiental: %d\n", sensorData -> ambient_temperature);
     printf("Nivel de tanque de reserva: %d\n", sensorData -> reserve_tank_level);
