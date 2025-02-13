@@ -1,3 +1,12 @@
+/**
+ *  Universidad Simón Bolívar
+ *  EP5801 - Sistemas Embebidos I
+ *  Laboratorio 1 - Colas lineales y circulares
+ * 
+ *  Josmar Dominguez 16-10315
+ */
+
+
 #include "queue_linear.h"
 #include "queue_circular.h"
 #include <stdio.h>
